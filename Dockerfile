@@ -14,7 +14,7 @@ RUN set -xe; \
     cp includes/config.environment.inc.php includes/config.inc.php; \
     chown -R adidas:adidas /src/app
 
-ENV PORT 80
-EXPOSE 80
+ENV PORT 8080
+EXPOSE 8080
 USER adidas
 ENTRYPOINT [ "sh", "-c", "tini -- php -S 0.0.0.0:$PORT" ]
